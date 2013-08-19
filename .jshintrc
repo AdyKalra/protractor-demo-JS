@@ -19,6 +19,30 @@
   "trailing": true,
   "smarttabs": true,
   "globals": {
-    "angular": false
+    "angular": false,
+    "afterEach": false,
+    "beforeEach": false,
+    "confirm": false,
+    "context": false,
+    "describe": false,
+    "ddescribe": false,
+    "expect": false,
+    "it": false,
+    "iit": false,
+    "jasmine": false,
+    "inject": false,
+    "pause": false,
+    "sleep": false,
+    "browser": false,
+    "expect": false,
+    "using": false,
+    "binding": false,
+    "input": false,
+    "repeater": false,
+    "select": false,
+    "element": false,
+    "_": false,
+    "helpers": false,
+    "protractor": false
   }
 }
