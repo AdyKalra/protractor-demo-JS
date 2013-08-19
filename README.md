@@ -17,6 +17,10 @@ Running:
 grunt server
 # run karma unit tests
 grunt test:unit
+# Start Selenium Server
+java -jar selenium/selenium-server-standalone-2.35.0.jar -Dwebdriver.chrome.driver=./selenium/chromedriver-osx
+# Start protractor (Manual)
+node_modules/.bin/protractor protractor.conf.js
 ```
 
 
@@ -72,12 +76,6 @@ Protractor API
 - ptor.findElement(protractor.By.css('option [value=0]')).click()
 - ptor.findElement(protractor.By.id('selectId')).click()
 - ptor.findElement(protractor.By.css('option [value=0]')).click()
-- ptor.findElement(protractor.By.)
-- ptor.findElement(protractor.By)
-- ptor.findElement(protractor.By)
-- ptor.findElement(protractor.By)
-- ptor.findElement(protractor.By)
-- ptor.findElement(protractor.By)
 
 Other
 -----
