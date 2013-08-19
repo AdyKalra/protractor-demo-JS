@@ -17,12 +17,21 @@ Running:
 grunt server
 # run karma unit tests
 grunt test:unit
+```
+```bash
+# Manual
 # Start Selenium Server
 java -jar selenium/selenium-server-standalone-2.35.0.jar -Dwebdriver.chrome.driver=./selenium/chromedriver-osx
 # Start protractor (Manual)
 node_modules/.bin/protractor protractor.conf.js
 ```
-
+```bash
+# Grunt
+# Start Selenium Server
+grunt test:selenium
+# Start protractor with watch
+grunt test:e2e
+```
 
 Protractor Docs
 ===============

@@ -8,6 +8,7 @@
     "grunt-contrib-jshint": "latest",
     "grunt-open": "latest",
     "grunt-karma": "latest",
+    "grunt-shell": "latest",
     "protractor": "latest"
   },
   "scripts": {
