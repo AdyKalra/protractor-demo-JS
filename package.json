@@ -7,7 +7,8 @@
     "grunt-contrib-watch": "latest",
     "grunt-contrib-jshint": "latest",
     "grunt-open": "latest",
-    "grunt-karma": "latest"
+    "grunt-karma": "latest",
+    "protractor": "latest"
   },
   "scripts": {
     "test": "grunt test"

@@ -57,7 +57,8 @@ module.exports = function(grunt) {
         'Gruntfile.js',
         'karma.conf.js',
         '<%= yeoman.app %>/scripts/{,*/}*.js',
-        'test/{,*/}*.js'
+        'test/spec/{,*/}*.js',
+        'test/e2e/{,*/}*.js'
       ]
     },
   });
