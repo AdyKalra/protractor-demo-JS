@@ -1,0 +1,10 @@
+{
+  "name": "protractorDemo",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.2.0rc1",
+    "angular-route": "latest",
+    "angular-mocks": "1.2.0rc1",
+    "bootstrap": "3.0.0-rc.2"
+  }
+}

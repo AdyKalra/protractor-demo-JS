@@ -1,0 +1,15 @@
+{
+  "name": "protractor-demo",
+  "version": "0.0.0",
+  "dependencies": {
+    "grunt": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-open": "latest",
+    "grunt-karma": "latest"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}
