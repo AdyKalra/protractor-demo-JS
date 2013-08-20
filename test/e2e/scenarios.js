@@ -38,16 +38,20 @@ describe('Form Page', function () {
   }, 100000);
 
   it('should enter input into form', function () {
+    // Input Examples
     ptor.findElement(protractor.By.input('input.email')).sendKeys('example@example.com');
     ptor.findElement(protractor.By.input('input.name')).sendKeys('my name');
     ptor.findElement(protractor.By.input('input.city')).sendKeys('davis');
-    ptor.findElement(protractor.By.selectedOption('input.state')).click();
+    // Select Example
+    ptor.findElement(protractor.By.id('state')).click();
+    ptor.findElement(protractor.By.css('option:nth-child(6)')).click();
+    // Checkbox Example
     ptor.findElement(protractor.By.input('input.checkbox')).click();
 
     expect(ptor.findElement(protractor.By.input('input.email')).getAttribute('value')).toBe('example@example.com');
     expect(ptor.findElement(protractor.By.input('input.name')).getAttribute('value')).toBe('my name');
     expect(ptor.findElement(protractor.By.input('input.city')).getAttribute('value')).toBe('davis');
-    // expect(ptor.findElement(protractor.By.selectedOption('input.state')).getAttribute('value')).toBe('');
+    expect(ptor.findElement(protractor.By.selectedOption('input.state')).getAttribute('value')).toBe('4');
     expect(ptor.findElement(protractor.By.input('input.checkbox')).isSelected()).toBeTruthy();
   }, 100000);
 });
