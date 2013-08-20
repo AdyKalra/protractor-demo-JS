@@ -78,7 +78,7 @@ Protractor API
 - ptor.findElement(protractor.By.input('model')).sendKeys(value)
 - ptor.findElement(protractor.By.input('model')).click()
 - ptor.findElement(protractor.By.input('model')).getText()
-- ptor.findElements(protractor.By.repeater('cat in pets')).length()
+- ~~ptor.findElements(protractor.By.repeater('cat in pets')).length()~~
 - ptor.findElements(protractor.By.repeater('cat in pets')).row(index)
 - ptor.findElements(protractor.By.repeater('cat in pets')).row(index).column(binding)
 - ptor.findElement(protractor.By.id('selectId')).click()
@@ -91,3 +91,4 @@ Other
 - ptor.waitForAngular()
 - ptor.addMockModule(name, script)
 - ptor.clearMockModules()
+- [Jasmine Matchers](https://github.com/pivotal/jasmine/wiki/Matchers)
