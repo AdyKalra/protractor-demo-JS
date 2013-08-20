@@ -18,6 +18,14 @@ describe('Controller: FormCtrl', function () {
   });
 
   it('should validate form', function () {
-    
+    scope.demoForm = {$valid: true};
+    scope.save();
+    expect(scope.demoForm.submitted).toBeUndefined();
+  });
+
+  it('should make form as submitted when invalid', function () {
+    scope.demoForm = {$valid: false};
+    scope.save();
+    expect(scope.demoForm.submitted).toBeTruthy();
   });
 });

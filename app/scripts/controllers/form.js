@@ -6,6 +6,8 @@ angular.module('protractorDemoApp').controller('FormCtrl', function ($scope) {
   $scope.save = function () {
     if ($scope.demoForm.$valid) {
       console.log('save');
+    } else {
+      $scope.demoForm.submitted = true;
     }
   };
 
