@@ -28,12 +28,6 @@ module.exports = function(grunt) {
           'test/spec/{,*/}*.js'
         ],
         tasks: ['jshint', 'karma:unit:run']
-      },
-      e2e: {
-        files: [
-          'test/e2e/{,*/}*.js'
-        ],
-        tasks: ['jshint', 'shell:protractor']
       }
     },
     connect: {
@@ -68,17 +62,20 @@ module.exports = function(grunt) {
       ]
     },
     shell: {
+      install: {
+        command: [
+          './node_modules/protractor/bin/install_selenium_standalone',
+          'bower install'
+        ].join('&&'),
+        options: { stdout: true }
+      },
       selenium: {
-        command: 'java -jar selenium/selenium-server-standalone-2.35.0.jar -Dwebdriver.chrome.driver=./selenium/chromedriver-osx &',
-        options: {
-          stdout: true
-        }
+        command: './selenium/start',
+        options: { stdout: true }
       },
       protractor: {
         command: 'node_modules/.bin/protractor protractor.conf.js',
-        options: {
-          stdout: true
-        }
+        options: { stdout: true }
       }
     }
   });
@@ -90,9 +87,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-shell');
 
+  grunt.registerTask('default', ['shell:install']);
   grunt.registerTask('server', ['jshint', 'connect:server', 'open', 'watch:app']);
+  grunt.registerTask('selenium', ['shell:selenium']);
   grunt.registerTask('test:unit', ['jshint', 'karma:unit', 'watch:unit']);
-  grunt.registerTask('test:selenium', ['shell:selenium']);
-  grunt.registerTask('test:e2e', ['jshint', 'shell:protractor', 'watch:e2e']);
+  grunt.registerTask('test:e2e', ['jshint', 'shell:protractor']);
 
 };
